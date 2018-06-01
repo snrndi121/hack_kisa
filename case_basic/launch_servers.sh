@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export TAG=RC1.19.2
-export SSH_KEY_FOLDER=/home/ubuntu/hack_kisa/case_basic/
+export SSH_KEY_FOLDER=/home/ubuntu/.ssh/
 
 # Make log folder.
 export LOG_FOLDER=$(pwd)/logs
@@ -30,10 +30,9 @@ loopchain/looprs:${TAG} \
 python3 radiostation.py -o /conf/rs_conf.json
 
 
-# Peer 0번에서 이용할 데이타 저장 공간을 만듭니다.
+# Peer 0
 mkdir -p storage0
 
-# Peer 0번을 띄웁니다.
 docker run -d --name peer0 \
 -v $(pwd)/conf:/conf \
 -v $(pwd)/storage0:/.storage \
@@ -45,7 +44,7 @@ docker run -d --name peer0 \
 loopchain/looppeer:${TAG} \
 python3 peer.py -o /conf/peer_conf.json  -r radio_station:7102
 
-# peer1
+# Peer 1
 mkdir -p storage1
 docker run -d --name peer1 \
 -v $(pwd)/conf:/conf \
