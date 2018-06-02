@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <?php
+  $arr = array();
+  function isValidJSON($str) {
+    $arr = json_decode($str);
+    return json_last_error() == JSON_ERROR_NONE;
+  }
+
+  $json_params = file_get_contents("php://input");
+
+  if (isset($arr) && isValidJSON($json_params)) {
+    $decoded_params = json_decode($json_params, true);
+    var_dump($decoded_params);
+    $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+    $myfile2 = fopen("log.txt", "a") or die("Unable to open file!");
+    fwrite($myfile, $decoded_params);
+    fwrite($myfile2, $decoded_params);
+    fclose($myfile);
+    fclose($myfile2);
+  } else {
+	var_dump($arr);
+	$myfile = fopen("dontwork.txt", "w");
+	fwrite($myfile, "done work");
+	fclose($myfile);	
+  }
 ?>
 <html lang="ko">
   <head>
@@ -426,15 +449,5 @@
 
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
-
-    <!--script for this page-->
-
-  <script>
-      //custom select box
-      $(function(){
-          $('select.styled').customSelect();
-      });
-  </script>
-
   </body>
 </html>
