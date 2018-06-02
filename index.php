@@ -1,6 +1,17 @@
 
 <?php
- //Todo : variable from NH API
+  function isValidJSON($str) {
+    json_decode($str);
+    return json_last_error() == JSON_ERROR_NONE;
+  }
+
+  $json_params = file_get_contents("php://input");
+
+  if (strlen($json_params) > 0 && isValidJSON($json_params)) {
+    $decoded_params = json_decode($json_params);
+    var_dump($decoded_params);
+  }
+
 ?>
 <html>
   <head>

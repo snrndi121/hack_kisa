@@ -221,7 +221,7 @@
               <div id="sidebar"  class="nav-collapse ">
                   <!-- sidebar menu start-->
                   <ul class="sidebar-menu" id="nav-accordion">
-                  	  <p class="centered"><a href="profile.html"><img src="assets/img/nh_knight.jpg" class="img-circle" width="60"></a></p>
+                  	  <p class="centered"><a href="home.php"><img src="assets/img/nh_knight.jpg" class="img-circle" width="60"></a></p>
                   	  <h5 class="centered">농키사</h5>
                       <li class="sub-menu">
                           <a href="javascript:;">
@@ -282,27 +282,6 @@
                         <div id="info_field1" style="position: absolute;"></div>
                         <div id="info_field2" style="position: absolute;"></div>
                         <div id="info_field3" style="position: absolute;"></div>
-                        <!-- <div id="pie-chart" ></div> -->
-                        <div id="graph"></div>
-<pre id="code" class="prettyprint linenums">
-// Use Morris.Area instead of Morris.Line
-Morris.Area({
-  element: 'graph',
-  data: [
-    {x: '2010 Q4', y: 3, z: 7},
-    {x: '2011 Q1', y: 3, z: 4},
-    {x: '2011 Q2', y: null, z: 1},
-    {x: '2011 Q3', y: 2, z: 5},
-    {x: '2011 Q4', y: 8, z: 2},
-    {x: '2012 Q1', y: 4, z: 4}
-  ],
-  xkey: 'x',
-  ykeys: ['y', 'z'],
-  labels: ['Y', 'Z']
-}).on('click', function(i, row){
-  console.log(i, row);
-});
-</pre>
                     </aside>
                     <aside class="right-side">
                         <div class="custom-bar-chart">
