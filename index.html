@@ -2,9 +2,22 @@
 <html>
   <head>
     <title></title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
-    <img onclick="javascript:location.href='img/home.php'" src="./img/logo.png"
-    style="margin-left: auto; margin-right: auto; display: block;margin-top: 50px"/>
+    <p>
+      <img id="main_logo" src="assets/img/logo.png"
+      style="margin-left: auto; margin-right: auto; display: block;margin-top: 50px"/>
+    </p>
   </body>
+  <script>
+    $("p").click(function () {
+      jQuery("#main_logo").fadeOut("slow", function() {
+        // Animation complete.
+        location.href="home.php";
+      });
+    });
+
+
+  </script>
 </html>

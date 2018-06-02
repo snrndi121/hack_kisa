@@ -106,24 +106,12 @@
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">4</span>
+                            <span class="badge bg-theme">3</span>
                         </a>
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">4개의 메시지가 도착하였습니다.</p>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/friends/fr-03.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">이현서</span>
-                                    <span class="time">방금</span>
-                                    </span>
-                                    <span class="message">
-                                        어서 마치고 갑시다.
-                                    </span>
-                                </a>
+                                <p class="green">3개의 메시지가 도착하였습니다.</p>
                             </li>
                             <li>
                                 <a href="index.html#">
@@ -133,7 +121,7 @@
                                     <span class="time">40 분전.</span>
                                     </span>
                                     <span class="message">
-                                     노트북 어댑터 고장나서 포기합니다.
+                                     노트북이 이상해요.
                                     </span>
                                 </a>
                             </li>
@@ -145,7 +133,7 @@
                                     <span class="time">4 시간 전.</span>
                                     </span>
                                     <span class="message">
-                                        집에 가고 싶습니다.
+                                        이제는 집에 보내주세요.
                                     </span>
                                 </a>
                             </li>
@@ -154,10 +142,10 @@
                                     <span class="photo"><img alt="avatar" src="assets/img/friends/fr-01.jpg"></span>
                                     <span class="subject">
                                     <span class="from">이장형</span>
-                                    <span class="time">10 시간 전.</span>
+                                    <span class="time">40 시간 전.</span>
                                     </span>
                                     <span class="message">
-                                        커피사갈까요?
+                                        커피 드실래요?
                                     </span>
                                 </a>
                             </li>
@@ -172,7 +160,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                    <li><a class="logout" href="login.html">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -420,7 +408,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2018 - 즐거운 핀테크 가즈아
-              <a href="home.php#" class="go-top">
+              <a href="lobby.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
