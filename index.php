@@ -1,4 +1,3 @@
-
 <?php
   function isValidJSON($str) {
     json_decode($str);
@@ -16,7 +15,6 @@
     fclose($myfile);
     fclose($myfile2);
   }
-
 ?>
 <html>
   <head>
