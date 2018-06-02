@@ -25,8 +25,58 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+    window.onload=function() {
+  document.onclick=processClick;
+}
+  <script>
+  window.onload=function() {
+    document.onclick=processClick;
+  }
+  function processClick(evt) {
+    evt = evt || window.event;
+    var x = 0; var y = 0;
+    if (evt.pageX) {
+      x = evt.pageX;
+      y = evt.pageY;
+    } else if (evt.clientX) {
+      var offsetX = 0; offsetY = 0;
+      if (document.documentElement.scrollLeft) {
+         offsetX = document.documentElement.scrollLeft;
+         offsetY = document.documentElement.scrollTop;
+      } else if (document.body) {
+         offsetX = document.body.scrollLeft;
+         offsetY = document.body.scrollTop;
+      }
 
+      x = evt.clientX + offsetX;
+      y = evt.clientY + offsetY;
+    }
+
+    var style = "left: " + x + "px; top: " + y + "px";
+    var box = document.getElementById("info");
+    box.setAttribute("style", style);
+  }
+  function loadRegion(evt) {
+
+  }
+  </script>
+  </head>
+  <style>
+  main-content{
+    background: url(https://localhost/hack_kisa/assets/img/local-01.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #info {
+    width: 20px; height: 20px;
+    background-color: #ff0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  </style>
   <body>
 
   <section id="container" >
@@ -55,50 +105,7 @@
                             <li>
                                 <p class="green">2 개의 모임에서 코인이 쌓였습니다.</p>
                             </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">가락동 교회</div>
-                                        <div class="percent">60%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">가락동 자원봉사모임</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                              <!--
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
-                                        <div class="percent">70%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                            <span class="sr-only">70% Complete (Important)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                          -->
-                            <li class="external">
-                                <a href="#">더 보기</a>
-                            </li>
+
                         </ul>
                     </li>
                     <!-- settings end -->
@@ -208,7 +215,7 @@
                           <span>농촌 모니터링</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="coin_monitor.php">전국 모니터링</a></li>
+                          <li><a  href="javascript:;">전국 모니터링</a></li>
                           <li><a  href="javascript:;">가족 모니터링</a></li>
                         <!--
                           <li><a  href="todo_list.html">Todo List</a></li>
@@ -310,96 +317,15 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-              <!-- page start-->
-              <div class="chat-room mt">
-                  <aside class="mid-side">
-                      <div class="chat-room-head">
-                          <h3>모임 코인 현황</h3>
-                          <form action="#" class="pull-right position">
-                              <input type="text" placeholder="Search" class="form-control search-btn ">
-                          </form>
-                      </div>
-
-                      <div class="room-desk">
-                          <h4 class="pull-left">공개 모임</h4>
-                          <a href="#" class="pull-right btn btn-theme02">+ 새 모임 만들기</a>
-                          <div class="room-box">
-                              <h5 class="text-primary"><a href="coin_stack.html">가락동 교회</a></h5>
-                              <p>깨끗한 가락동 교회, 부정없는 가락동.</p>
-                              <p><span class="text-muted">모임장 :</span> 이장형 | <span class="text-muted">멤버 :</span> 98 | <span class="text-muted">마지막 활동 :</span> 2 분 전</p>
-                          </div>
-                          <div class="room-box">
-                              <h5 class="text-primary"><a href="coin_stack.html">가락동 자원봉사모임</a></h5>
-                              <p>당신이 베푼 마음만큼 쌓여갑니다.</p>
-                              <p><span class="text-muted">모임장 :</span> 이현서 | <span class="text-muted">멤버 :</span> 44 | <span class="text-muted">마지막 활동 :</span> 15 분 전</p>
-                          </div>
-                          <!--
-                          <div class="room-box">
-                              <h5 class="text-primary"><a href="chat_room.html">MaxFront</a></h5>
-                              <p>Technical support for our front-end. No customization.</p>
-                              <p><span class="text-muted">Admin :</span> Marcel Newman | <span class="text-muted">Member :</span> 22 | <span class="text-muted">Last Activity :</span> 15 min ago</p>
-                          </div>
-                        -->
-                      </div>
-                      <div class="room-desk">
-                          <h4 class="pull-left">사설 모임</h4>
-                          <div class="room-box">
-                              <h5 class="text-primary"><a href="coin_stack.html">우리 가족</a></h5>
-                              <p>할머니, 할아버지 전용.</p>
-                              <p><span class="text-muted">모임장 :</span> 이민종 | <span class="text-muted">멤버 :</span> 4 | <span class="text-muted">마지막 활동 :</span> 15 분 전</p>
-                          </div>
-                      </div>
-
-                  </aside>
-                  <aside class="right-side">
-                      <div class="user-head">
-                          <a href="#" class="chat-tools btn-theme"><i class="fa fa-cog"></i> </a>
-                          <a href="#" class="chat-tools btn-theme03"><i class="fa fa-key"></i> </a>
-                      </div>
-                      <div class="invite-row">
-                          <h4 class="pull-left">핀테크하다 어쩌다</h4>
-                          <a href="#" class="btn btn-theme04 pull-right">+ 초대</a>
-                      </div>
-                      <ul class="chat-available-user">
-                          <li>
-                              <a href="#">
-                                  <img class="img-circle" src="assets/img/friends/fr-01.jpg" width="32">
-                                  이장형
-                                  <span class="text-muted"> 1h:02m</span>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <img class="img-circle" src="assets/img/friends/fr-02.jpg" width="32">
-                                  이민종
-                                  <span class="text-muted"> 1h:08m</span>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <img class="img-circle" src="assets/img/friends/fr-03.jpg" width="32">
-                                  이현서
-                                  <span class="text-muted"> 1h:10m</span>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <img class="img-circle" src="assets/img/friends/fr-04.jpg" width="32">
-                                  양용준
-                                  <span class="text-muted"> 3h:00m</span>
-                              </a>
-                          </li>
-                          <li>
-                              <a href="chat_room.html">
-                                  <img class="img-circle" src="assets/img/friends/fr-05.jpg" width="32">
-                                  권성욱
-                                  <span class="text-muted"> 4h:22m</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </aside>
-              </div>
-              <!-- page end-->
+          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
+          	<div class="row mt">
+          		<div class="col-lg-12">
+          		<p>Place your content here.</p>
+          		</div>
+              <img src="assets/img/local-01.png"
+              style="margin-right: 40px; display: block;margin-top: 50px">
+          	</div>
+              <div id="info"></div>
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -428,13 +354,13 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-
+    <!--
   <script>
       //custom select box
       $(function(){
           $('select.styled').customSelect();
       });
   </script>
-
+  -->
   </body>
 </html>
