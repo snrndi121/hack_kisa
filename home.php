@@ -10,7 +10,7 @@
 
   if (isset($arr) && isValidJSON($json_params)) {
     $decoded_params = json_decode($json_params, true);
-    var_dump($decoded_params);
+    //var_dump($decoded_params);
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
     $myfile2 = fopen("log.txt", "a") or die("Unable to open file!");
     fwrite($myfile, $decoded_params);
@@ -18,7 +18,7 @@
     fclose($myfile);
     fclose($myfile2);
   } else {
-	var_dump($arr);
+	//var_dump($arr);
 	$myfile = fopen("dontwork.txt", "w");
 	fwrite($myfile, "done work");
 	fclose($myfile);	
@@ -183,7 +183,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                    <li><a class="logout" href="#">로그아웃</a></li>
             	</ul>
             </div>
         </header>

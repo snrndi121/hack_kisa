@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <meta charset="utf-8">
->>>>>>> e96a1b7d49c9c5e69298d5271533a9d669d98175
 <?php
   $arr = array();
   function isValidJSON($str) {
