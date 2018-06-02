@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <meta charset="utf-8">
->>>>>>> 1737909668aa9cb088436bdaf978d5c815896544
 <?php
   function isValidJSON($str) {
     json_decode($str);
@@ -11,7 +8,7 @@
   $data_array=array();
   $json_params = file_get_contents("php://input");
   
-  if (strlen($json_params) > 0 && isValidJSON($json_params)) {
+  if (isValidJSON($json_params)) {
     $decoded_params = json_decode($json_params);
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
     $myfile2 = fopen("log.txt", "a") or die("Unable to open file!");
