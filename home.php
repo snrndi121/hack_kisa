@@ -10,7 +10,7 @@
 
   if (isset($arr) && isValidJSON($json_params)) {
     $decoded_params = json_decode($json_params, true);
-    var_dump($decoded_params);
+    //var_dump($decoded_params);
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
     $myfile2 = fopen("log.txt", "a") or die("Unable to open file!");
     fwrite($myfile, $decoded_params);
@@ -18,10 +18,10 @@
     fclose($myfile);
     fclose($myfile2);
   } else {
-	var_dump($arr);
+	//var_dump($arr);
 	$myfile = fopen("dontwork.txt", "w");
 	fwrite($myfile, "done work");
-	fclose($myfile);	
+	fclose($myfile);
   }
 ?>
 <html lang="ko">
@@ -81,7 +81,7 @@
                             <li>
                                 <a href="index.php#">
                                     <div class="task-info">
-                                        <div class="desc">가락동 교회</div>
+                                        <div class="desc">군산읍 교회</div>
                                         <div class="percent">60%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -94,7 +94,7 @@
                             <li>
                                 <a href="index.php#">
                                     <div class="task-info">
-                                        <div class="desc">가락동 자원봉사모임</div>
+                                        <div class="desc">강원도 철원 자원봉사</div>
                                         <div class="percent">80%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -183,7 +183,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">로그아웃</a></li>
+                    <li><a class="logout" href="#">로그아웃</a></li>
             	</ul>
             </div>
         </header>
@@ -337,7 +337,7 @@
               <div class="chat-room mt">
                   <aside class="mid-side">
                       <div class="chat-room-head">
-                          <h3>모임 코인 현황</h3>
+                          <h3>팜코인 현황</h3>
                           <form action="#" class="pull-right position">
                               <input type="text" placeholder="Search" class="form-control search-btn ">
                           </form>
@@ -347,12 +347,12 @@
                           <h4 class="pull-left">공개 모임</h4>
                           <a href="#" class="pull-right btn btn-theme02">+ 새 모임 만들기</a>
                           <div class="room-box">
-                              <h5 class="text-primary"><a href="coin_stack.html">가락동 교회</a></h5>
-                              <p>깨끗한 가락동 교회, 부정없는 가락동.</p>
+                              <h5 class="text-primary"><a href="coin_stack.html">군산읍 교회</a></h5>
+                              <p>깨끗한 군산, 부정없는 우리 교회.</p>
                               <p><span class="text-muted">모임장 :</span> 이장형 | <span class="text-muted">멤버 :</span> 98 | <span class="text-muted">마지막 활동 :</span> 2 분 전</p>
                           </div>
                           <div class="room-box">
-                              <h5 class="text-primary"><a href="coin_stack.html">가락동 자원봉사모임</a></h5>
+                              <h5 class="text-primary"><a href="coin_stack.html">강원 철원군 자원봉사</a></h5>
                               <p>당신이 베푼 마음만큼 쌓여갑니다.</p>
                               <p><span class="text-muted">모임장 :</span> 이현서 | <span class="text-muted">멤버 :</span> 44 | <span class="text-muted">마지막 활동 :</span> 15 분 전</p>
                           </div>
@@ -380,7 +380,7 @@
                           <a href="#" class="chat-tools btn-theme03"><i class="fa fa-key"></i> </a>
                       </div>
                       <div class="invite-row">
-                          <h4 class="pull-left">핀테크하다 어쩌다</h4>
+                          <h4 class="pull-left">즐거운 핀테크 가즈아</h4>
                           <a href="#" class="btn btn-theme04 pull-right">+ 초대</a>
                       </div>
                       <ul class="chat-available-user">
