@@ -9,7 +9,12 @@
 
   if (strlen($json_params) > 0 && isValidJSON($json_params)) {
     $decoded_params = json_decode($json_params);
-    var_dump($decoded_params);
+    $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+    $myfile2 = fopen("log.txt", "a") or die("Unable to open file!");
+    fwrite($myfile, $decoded_params);
+    fwrite($myfile2, $decoded_params);
+    fclose($myfile);
+    fclose($myfile2);
   }
 
 ?>
